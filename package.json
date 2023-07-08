@@ -1,0 +1,14 @@
+{
+  "name": "chandu-profile",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "vite-plugin-minify": "^1.5.2"
+  }
+}
