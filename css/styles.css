@@ -1,6 +1,11 @@
 @import './normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+@font-face {
+  font-family: 'Catamaran'; 
+  src: url('../fonts/catamaran-variable.ttf') format('truetype');
+  font-weight: 100 900; 
+  font-style: normal; 
+}
 
 /* Box sizing */
 *, *::before, *::after {
