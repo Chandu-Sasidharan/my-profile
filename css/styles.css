@@ -1,129 +1,181 @@
 @import './normalize.css';
 
 @font-face {
-  font-family: 'Catamaran'; 
-  src: url('../fonts/catamaran-variable.ttf') format('truetype');
-  font-weight: 100 900; 
-  font-style: normal; 
+    font-family: 'Catamaran';
+    src: url('../fonts/catamaran-variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
 }
 
 /* Box sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 /* Variables */
 :root {
-  --heading-color: #454955;
-  --paragraph-color: #454955;
-  --bg-color: #eee;
+    --heading-color: #454955;
+    --paragraph-color: #454955;
+    --bg-color: #eee;
 }
 
 /* Global styles */
 html {
-  font-size: calc(0.2vw + 0.2vh + 0.3rem);
-  font-family: 'Catamaran', sans-serif;
-  scroll-behavior: smooth;
+    font-size: calc(0.2vw + 0.2vh + 0.3rem);
+    font-family: 'Catamaran', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-color);
+    background-color: var(--bg-color);
+    margin: 0;
 }
 
 a {
-  transition: all 0.1s;
+    transition: all 0.1s;
 }
 
-a:link, a:visited {
-  color: var(--paragraph-color);
+a:link,
+a:visited {
+    color: var(--paragraph-color);
 }
 
-a:hover, a:focus {
-  color: tomato;
-  transform: scale(1.1);
-  outline: none;
+a:hover,
+a:focus {
+    color: tomato;
+    transform: scale(1.1);
+    outline: none;
 }
 
 a:active {
-  color: rgb(253, 137, 116);
+    color: rgb(253, 137, 116);
 }
 
 /* Main styles */
 main {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
 }
 
 .textSection {
-  padding: 5rem;
+    padding: 5rem;
 }
 
 .textSection h1 {
-  font-size: 7rem;
-  font-weight: 200;
-  margin: 0;
-  text-align: left;
-  color: var(--heading-color);
-}
-
-.textSection h2 {
-  font-family: 'Ephesis', cursive;
-  font-size: 3.5rem;
+    font-size: 7rem;
+    font-weight: 200;
+    margin: 0;
+    text-align: left;
+    color: var(--heading-color);
 }
 
 .textSection p {
-  font-size: 2.5rem;
-  line-height: 1.4;
-  margin: 1rem 0 4rem 0;
-  font-weight: 300;
-  color: var(--paragraph-color);
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin: 1rem 0 4rem 0;
+    font-weight: 300;
+    color: var(--paragraph-color);
 }
 
 .textSection .social {
-  font-size: 2.5rem;
-  display: flex;
-  gap: 2.5rem;
-  color: var(--paragraph-color);
+    font-size: 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+    color: var(--paragraph-color);
 }
 
 .imageSection img {
-  height: 100vh;
+    height: 100vh;
+    display: block;
+}
+
+.legal-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.legal-page .textSection h2 {
+    font-family: 'Ephesis', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.legal-page .address p {
+    margin: 0.2rem 0;
+}
+
+.legal-page .impressum-footer {
+    margin-top: 4rem;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.site-footer {
+    background-color: #e3e3e3;
+    border-top: 1px solid #d5d5d5;
+    color: var(--paragraph-color);
+    padding: 2rem 3rem;
+}
+
+.site-footer h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 2rem 0 1rem 0;
+}
+
+.site-footer p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 0.4rem 0;
+}
+
+.site-footer .copyright {
+    font-weight: 500;
 }
 
 /* Media queries */
 @media screen and (max-width: 1300px) {
-  .imageSection img {
-    height: auto;
-  }
+    .imageSection img {
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 1025px) {
-  main {
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .textSection {
-    padding: 5rem;
-    text-align: center;
-    order: 1;
-  }
-  
-  .textSection h1 {
-    text-align: center;
-    font-size: 5rem;
-  }
-  
-  .textSection .social {
-    justify-content: center;
-  }
-  
-  .imageSection {
-    text-align: center;
-  }
-  
-  .imageSection img {
-    width: 90%;
-  }
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textSection {
+        padding: 5rem;
+        text-align: center;
+        order: 1;
+    }
+
+    .textSection h1 {
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .textSection .social {
+        justify-content: center;
+    }
+
+    .imageSection {
+        text-align: center;
+    }
+
+    .imageSection img {
+        width: 90%;
+    }
+
+    .site-footer {
+        padding: 2rem;
+    }
 }
