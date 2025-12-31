@@ -1,0 +1,13 @@
+services:
+    my-profile:
+        image: ghcr.io/chandu-sasidharan/my-profile:latest
+        container_name: my-profile
+        expose:
+            - '80'
+        networks:
+            - edge_net
+        restart: unless-stopped
+
+networks:
+    edge_net:
+        external: true
