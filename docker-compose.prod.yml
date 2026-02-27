@@ -1,6 +1,6 @@
 services:
     my-profile:
-        image: ghcr.io/chandu-sasidharan/my-profile:latest
+        image: ghcr.io/chandu-sasidharan/my-profile:prod
         container_name: my-profile
         expose:
             - '80'
